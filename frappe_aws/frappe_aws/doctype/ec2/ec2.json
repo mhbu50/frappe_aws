@@ -1,0 +1,91 @@
+{
+ "actions": [],
+ "autoname": "field:instance_id",
+ "creation": "2022-12-09 18:43:13.993756",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "instance_id",
+  "instant_name",
+  "region",
+  "column_break_2",
+  "status",
+  "section_break_4",
+  "activate",
+  "deactivate"
+ ],
+ "fields": [
+  {
+   "fieldname": "instant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Instant Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nInactive",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "deactivate",
+   "fieldtype": "Button",
+   "label": "Deactivate"
+  },
+  {
+   "fieldname": "region",
+   "fieldtype": "Data",
+   "label": "Region"
+  },
+  {
+   "fieldname": "instance_id",
+   "fieldtype": "Data",
+   "label": "Instance ID",
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "activate",
+   "fieldtype": "Button",
+   "label": "Activate"
+  }
+ ],
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-12-10 01:16:31.231852",
+ "modified_by": "Administrator",
+ "module": "Frappe AWS",
+ "name": "EC2",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "instance_id"
+}
