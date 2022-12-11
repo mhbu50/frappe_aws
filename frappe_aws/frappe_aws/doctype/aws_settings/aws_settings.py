@@ -12,8 +12,8 @@ class AWSSettings(Document):
 	def validate(self):
 		ec2_client = boto3.client(
 			'ec2',
-			aws_access_key_id=self.access_key_id,
-			aws_secret_access_key=self.get_password("aws_secret_access_key"),
+			aws_access_key_id = self.access_key_id,
+			aws_secret_access_key = self.access_key_secret,
 			region_name=self.region
 		)
 
@@ -21,8 +21,8 @@ class AWSSettings(Document):
 			response = ec2_client.describe_instances()
 			for i in response['Reservations']:
 				for j in i['Instances']:
-					frappe.msgprint(frappe.as_json(j))
-					# frappe.msgprint('state of the instance "' + j['InstanceId'] + '" is: "' + j['State']['Name'] + '"')
+					# frappe.msgprint(frappe.as_json(j))
+					frappe.msgprint('state of the instance "' + j['InstanceId'] + '" is: "' + j['State']['Name'] + '"')
 
 		except ClientError:
 			frappe.throw(_("Invalid Access Key ID or Secret Access Key."))
@@ -31,8 +31,8 @@ class AWSSettings(Document):
 	def sync_ec2(self, doc):
 		ec2_client = boto3.client(
 			'ec2',
-			aws_access_key_id=self.access_key_id,
-			aws_secret_access_key=self.get_password("access_key_secret"),
+			aws_access_key_id = self.access_key_id,
+			aws_secret_access_key = self.access_key_secret,
 			region_name=self.region
 		)
 		status =""

@@ -27,7 +27,7 @@
   },
   {
    "fieldname": "access_key_secret",
-   "fieldtype": "Password",
+   "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Access Key Secret",
    "reqd": 1
@@ -50,7 +50,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2022-12-09 20:08:56.324256",
+ "modified": "2022-12-11 22:51:18.544666",
  "modified_by": "Administrator",
  "module": "Frappe AWS",
  "name": "AWS Settings",
